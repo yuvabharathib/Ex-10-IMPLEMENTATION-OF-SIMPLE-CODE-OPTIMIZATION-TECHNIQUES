@@ -13,21 +13,17 @@ To write a C program to implement simple code optimization techniques such as Co
 ```
 #include <stdio.h>
 #include <string.h>
-
 struct op {
     char l;
     char r[20];
 } op[10], pr[10];
-
 int main() {
     int a, i, k, j, n, z = 0, m, q;
     char *p, *l;
     char temp, t;
     char *tem;
-
     printf("Enter the Number of Values: ");
     scanf("%d", &n);
-
     for (i = 0; i < n; i++) {
         printf("left: ");
         scanf(" %c", &op[i].l); // Notice the space before %c to consume the newline character
@@ -51,7 +47,6 @@ int main() {
             }
         }
     }
-
     pr[z].l = op[n - 1].l;
     strcpy(pr[z].r, op[n - 1].r);
     z++;
